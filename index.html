@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Assignment 2</h2>
+        <div class="bar"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="heading">List of People</h3>
+
+                <table id="addEle" class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="heading">Add / Update Person Form</h3>
+
+                <form id="form" class="form" autocomplete="off">
+                    <div class="grid-container">
+                        <div class="grid-item"> <span>Name</span>   </div> 
+                        <div class="grid-item"> <input type="text" maxlength="10" id="name" required />    </div>
+                        <div class="grid-item"> <span>Gender</span> </div> 
+                        <div class="grid-item"> 
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="male">Female</label>
+                        </div>
+                        <div class="grid-item"> <span>Age</span>    </div> 
+                        <div class="grid-item"> <input type="number" id="age" required>  </div>
+                        <div class="grid-item"> <span>City</span>   </div> 
+                        <div class="grid-item"> 
+                            <select name="selectcity" class="custom-select" id="city">
+                                <option value="Lahore">Lahore</option>
+                                <option value="Karachi">Karachi</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <Div class="row btns">
+                    <div class="col-md-4">
+                        <button class="btn btn-form" id="reset">Reset</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-form" id="add">Add</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-form" id="updateb" disabled>Update</button>
+                    </div>
+                </Div>
+                <div id="error"></div>
+            </div>
+        </div>
+        <div class="bar"></div>
+    </div>
+    <br>
+
+</body>
+</html>
