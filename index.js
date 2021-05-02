@@ -40,7 +40,7 @@ function checkInput(){
         return false;
     }
     else if(!regName.test($('#name').val()))
-        $('#error').append("Name sould only contain letters, length[min 1, max 20]");
+        $('#error').append("Name sould only contain letters, length[min 1, max 10]");
     else if($('#age').val()<10 || $('#age').val()>50)
         $('#error').append("Age must between 10 and 50");
     else    return true;
