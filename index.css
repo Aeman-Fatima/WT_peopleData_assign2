@@ -13,10 +13,14 @@ body{
     padding: 12px 0px;
     text-align: left;
   }
-  .error{
-      border: 1px solid red;
+  #error{
+      color: #e27d60;
+      font-weight: bold;
+      padding: 10px;
   }
-
+.error{
+  border: 1px solid red;
+}
   input{
       border: 1px solid rgba(128, 128, 128, 0.247);
       border-radius: 5px;
@@ -52,10 +56,11 @@ body{
     border: 1px solid #e27d60;
     width: 100%;
     font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .form, .btns{
-    margin-top: 4em;
+    margin-top: 2em;
     padding-left: 1em;
 }
 .heading{
@@ -102,17 +107,50 @@ table {
      height: .5px;
      background-color: #e27d60;
  }
- #error{
-     color:#e27d60;
-     font-size: 14px;
-     margin-top: 20px;
- }
 
- td a:hover{
+
+ td .delelte:hover:not([disabled]), .update:hover:not([disabled]){
     cursor: pointer;
     color: #963115!important;
     transition: 0.2s;
+    background: none;
+    border: none;
  }
- td a{
+ td .delete, .update{
     transition: 0.2s;
+    background: none;
+    border: none;
  }
+ .input[type="radio"]:checked:after {
+  background-color: #e27d60;
+  border-color: #e27d60;
+}
+
+
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e27c6027;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #e27c6027;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e27d60;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #e27c6027;
+}
